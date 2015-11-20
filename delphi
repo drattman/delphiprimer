@@ -1,0 +1,21 @@
+var
+j, p: integer;
+begin
+While j< ListBox1.Items.Count-1 Do
+begin
+j:=j+1;
+p:=Pos(Edit1.Text, ListBox1.Items[j]);
+if p>0 then
+begin
+Memo1.Lines.Clear;
+Memo1.Lines.Add(ListBox1.Items[j]);
+break;
+end;
+if j=ListBox1.Items.Count-1 then
+begin
+if p=0 then
+ShowMessage('Не найдено');
+end;
+end;
+ListBox1.ItemIndex:=J;
+end.
